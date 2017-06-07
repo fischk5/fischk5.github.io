@@ -1,0 +1,202 @@
+body {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  background-color: #e8effc;
+  color: #5e5e5e;
+  max-width: 900px;
+  padding-left: 12px;
+  padding-right: 12px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img {
+  max-width: 100%;
+  background-size: cover;
+}
+
+ul {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+h4 {
+  font-weight: lighter;
+  text-align: left;
+  font-size: 18px;
+}
+
+li {
+  margin-bottom: 1em;
+}
+
+.resume-header {
+  text-align: center;
+  max-width: 100%;
+}
+
+.resume-header-title {
+  font-size: 84px;
+  font-weight: bold;
+}
+
+.resume-header-subtitle {
+  font-size: 18px;
+}
+
+.resume-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.resume-purpose {
+  font-weight: 200;
+  text-align: center;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.resume-section {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.project {
+  margin-bottom: 40px;
+}
+
+.project-name {
+  font-weight: normal;
+  text-align: left;
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.project-desc {
+  font-weight: bold;
+  text-align: left;
+  font-size: 18px;
+  margin-top: 4px;
+  margin-bottom: 12px;
+}
+
+.project-items {
+  font-weight: normal;
+  text-align: left;
+  font-size: 18px;
+}
+
+#resume-projects {
+  width: calc(75% - 40px);
+  margin-right: 40px;
+  text-align: left;
+}
+
+#resume-work {
+  width: calc(75% - 40px);
+  margin-right: 40px;
+  text-align: left;
+}
+
+#resume-education {
+  width: calc(75% - 40px);
+  margin-right: 40px;
+  text-align: left;
+}
+
+#resume-picture {
+  width: 25%;
+}
+
+#resume-skillz {
+  width: 25%;
+  text-align: center;
+}
+
+#resume-contact {
+  width: 25%;
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+
+  body{
+    font-size: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .resume-header-title {
+    font-size: 36px;
+  }
+
+  .resume-section {
+    width: 100%;
+    font-size: 24px;
+  }
+
+  .resume-purpose {
+    width: 90%;
+  }
+
+  .project {
+    margin-bottom: 24px;
+  }
+
+  .project-name {
+    font-weight: normal;
+    text-align: left;
+    font-size: 18px;
+  }
+
+  .project-desc {
+    font-weight: bold;
+    text-align: left;
+    font-size: 12px;
+  }
+
+  .project-items {
+    font-weight: normal;
+    text-align: left;
+    font-size: 12px;
+  }
+
+  #resume-projects {
+    order: 1;
+    width: 100%;
+    text-align: center;
+    margin-right: 0px;
+  }
+
+  #resume-work {
+    order: 2;
+    width: 100%;
+    text-align: center;
+    margin-right: 0px;
+  }
+
+  #resume-education {
+    order: 3;
+    width: 100%;
+    text-align: center;
+    margin-right: 0px;
+  }
+
+  #resume-picture {
+    display: none;
+  }
+
+  #resume-skillz {
+    order: 4;
+    width: 100%;
+  }
+
+  #resume-contact {
+    order: 5;
+    width: 100%;
+  }
+
+}
