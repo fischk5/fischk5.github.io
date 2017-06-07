@@ -1,13 +1,17 @@
 body {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 18px;
-  background-color: #e8effc;
-  color: #000000;
+  font-size: 20px;
+  background-color: #515151;
+  color: #f1f2eb;
   max-width: 900px;
   padding-left: 12px;
   padding-right: 12px;
   margin-left: auto;
   margin-right: auto;
+}
+
+a {
+  color: #eaeaea;
 }
 
 img {
@@ -50,10 +54,9 @@ li {
 }
 
 .resume-purpose {
-  font-size: 24px;
   font-weight: 200;
   text-align: center;
-  width: 75%;
+  width: 85%;
   margin-left: auto;
   margin-right: auto;
   padding-top: 10px;
@@ -70,14 +73,14 @@ li {
 }
 
 .project-name {
-  font-weight: normal;
   text-align: left;
   font-size: 24px;
   margin-bottom: 12px;
+  color: #ADA8B6;
 }
 
 .project-desc {
-  font-weight: bold;
+  color: #adfff1;
   text-align: left;
   font-size: 18px;
   margin-top: 4px;
@@ -88,6 +91,7 @@ li {
   font-weight: normal;
   text-align: left;
   font-size: 18px;
+  color: #f1f2eb;
 }
 
 #resume-projects {
@@ -141,28 +145,28 @@ li {
 
   .resume-purpose {
     width: 90%;
+    font-size: 18px;
   }
 
   .project {
-    margin-bottom: 24px;
+    margin-bottom: 100px;
   }
 
   .project-name {
     font-weight: normal;
-    text-align: left;
-    font-size: 18px;
+    text-align: center;
+    font-size: 24px;
   }
 
   .project-desc {
-    font-weight: bold;
-    text-align: left;
-    font-size: 12px;
+    text-align: center;
+    font-size: 18px;
   }
 
   .project-items {
     font-weight: normal;
     text-align: left;
-    font-size: 12px;
+    font-size: 18px;
   }
 
   #resume-projects {
