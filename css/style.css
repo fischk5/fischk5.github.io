@@ -15,19 +15,14 @@ a {
 }
 
 img {
-  max-width: 100%;
+  max-width: 33%;
+  max-height: 200px;
   background-size: cover;
 }
 
 ul {
   margin-top: 0px;
   margin-bottom: 0px;
-}
-
-h4 {
-  font-weight: lighter;
-  text-align: left;
-  font-size: 18px;
 }
 
 li {
@@ -44,42 +39,42 @@ li {
   font-weight: bold;
 }
 
-.resume-header-subtitle {
-  font-size: 18px;
-}
-
 .resume-container {
   display: flex;
   flex-wrap: wrap;
 }
 
 .resume-purpose {
-  font-weight: 200;
   text-align: center;
-  width: 85%;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 66%;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 10px;
-  padding-bottom: 10px;
 }
 
-.resume-section {
+.section-title {
   font-size: 36px;
   font-weight: bold;
+  width: 100%;
+  text-align: center;
 }
 
-.project {
+.project, .job {
+  margin-top: 24px;
   margin-bottom: 40px;
+  font-weight: normal;
 }
 
-.project-name {
+.project-name, .job-title {
   text-align: left;
   font-size: 24px;
   margin-bottom: 12px;
-  color: #ADA8B6;
+  text-decoration: underline;
 }
 
 .project-desc {
+  font-weight: normal;
   color: #adfff1;
   text-align: left;
   font-size: 18px;
@@ -87,43 +82,32 @@ li {
   margin-bottom: 12px;
 }
 
-.project-items {
+.job-name, .job-dates {
+  font-weight: normal;
+  color: #adfff1;
+  text-align: left;
+  font-size: 18px;
+}
+
+.project-items, .job-items {
   font-weight: normal;
   text-align: left;
   font-size: 18px;
   color: #f1f2eb;
 }
 
-#resume-projects {
-  width: calc(75% - 40px);
-  margin-right: 40px;
-  text-align: left;
+.job-items {
+  margin-top: 12px;
 }
 
-#resume-work {
-  width: calc(75% - 40px);
-  margin-right: 40px;
-  text-align: left;
+#resume-projects, #resume-work, #resume-education {
+  width: 100%;
+  margin-bottom: 24px;
 }
 
-#resume-education {
-  width: calc(75% - 40px);
-  margin-right: 40px;
-  text-align: left;
-}
-
-#resume-picture {
-  width: 25%;
-}
-
-#resume-skillz {
-  width: 25%;
-  text-align: center;
-}
-
-#resume-contact {
-  width: 25%;
-  text-align: center;
+#resume-skillz, #resume-contact {
+  width: 50%;
+  margin-bottom: 24px;
 }
 
 @media screen and (max-width: 600px) {
@@ -138,9 +122,10 @@ li {
     font-size: 36px;
   }
 
-  .resume-section {
+  .section-title {
     width: 100%;
-    font-size: 24px;
+    text-align: center;
+    font-size: 30px;
   }
 
   .resume-purpose {
@@ -148,11 +133,11 @@ li {
     font-size: 18px;
   }
 
-  .project {
-    margin-bottom: 100px;
+  .project, .job {
+    margin-bottom: 40px;
   }
 
-  .project-name {
+  .project-name, .job-title {
     font-weight: normal;
     text-align: center;
     font-size: 24px;
@@ -163,7 +148,11 @@ li {
     font-size: 18px;
   }
 
-  .project-items {
+  .job-name, .job-dates {
+    text-align: center;
+  }
+
+  .project-items, .job-items {
     font-weight: normal;
     text-align: left;
     font-size: 18px;
@@ -171,23 +160,18 @@ li {
 
   #resume-projects {
     order: 1;
-    width: 100%;
     text-align: center;
-    margin-right: 0px;
+    margin-bottom: 4px;
   }
 
   #resume-work {
     order: 2;
-    width: 100%;
     text-align: center;
-    margin-right: 0px;
   }
 
   #resume-education {
     order: 3;
-    width: 100%;
     text-align: center;
-    margin-right: 0px;
   }
 
   #resume-picture {

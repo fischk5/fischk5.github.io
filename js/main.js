@@ -12,18 +12,18 @@ function addToEndOfProjectSection(mProjectName, mProjectUrl, mProjectDescription
   var projectDiv = "<div class='project'></div>";
   projectsSection.append(projectDiv);
 
-  // Prepend project name div to new div just added
+  // Append project name div to new div just added
   var projectNameDiv = "<div class='project-name'>" + mProjectName + "</div>";
-  projectsSection.children().last().prepend(projectNameDiv);
+  projectsSection.children().last().append(projectNameDiv);
 
   // Append project description div as child to the project-name class div
   var projectDescDiv = "<div class='project-desc'>" + mProjectDescription + "</div>";
-  projectsSection.children().last().children().first().append(projectDescDiv);
+  projectsSection.children().last().append(projectDescDiv);
 
   // Append all items related to project with a for loop into a newly created <ul>
   var projectItemsUl = "<ul class='project-items'></ul>";
-  projectsSection.children().last().children().first().append(projectItemsUl);
-  var projectUl = projectsSection.children().last().children().first().find("ul");
+  projectsSection.children().last().append(projectItemsUl);
+  var projectUl = projectsSection.children().last().find("ul");
   for (var i=0; i < mProjectItems.length; i++) {
     // Obtain i'th item and append it to newly added ul
     var listItemToAppend = "<li>" + mProjectItems[i] + "</li>";
@@ -73,34 +73,83 @@ addToEndOfProjectSection(project4Name,null,project4Desc,project4Items);
 
 /*
 WORK
+  Work was populated by parsing a JSON object and appending the information
+  to the DOM with a parsing function
 */
+
+// Create a JSON object for the work information
+var workSectionJSON = '{'
++ '"jobs" : ['
++ '{'
++ '"name" : "Bolton & Menk, Inc.", '
++ '"startDate" : "May, 2013", '
++ '"endDate" : "June, 2017", '
++ '"title" : "Design Engineer", '
++ '"duties" : ["Functioned on multi-disciplinary design teams to prepare construction plans on a budget and deadline.", "Designed drainage systems for various levels of government projects.", "Developed a programmatic approach to stormwater harvest modeling which was adopted company-wide."], '
++ '"logoUrl" : "pictures/build/bmi_logo.jpg" '
++ '}, '
++ '{'
++ '"name" : "City of Burnsville", '
++ '"startDate" : "May, 2012", '
++ '"endDate" : "September, 2012", '
++ '"title" : "Engineering Aide, Survey Crew", '
++ '"duties" : ["Assisted survey chief during various City projects."], '
++ '"logoUrl" : "pictures/build/burnsville.png" '
++ '} ] }';
 
 // Obtaining the section with the id resume-work
 var workSection = $('#resume-work');
 
-// Use jQuery to add Work to the Work ID Section --- similar to above function for Projects
-function addToEndOfWorkSection(mWorkName, mWorkLogo, mWorkDescription, mWorkItems, mWorkDates) {
+// Function receives a JSON object, parses information, and adds to DOM
+function addJSONToWork(workJSON) {
+  // Parse the JSON object to variable obj
+  var obj = JSON.parse(workJSON);
 
-  // Append new div to projectsSection
-  var workDiv = "<div class='work'></div>";
-  workSection.append(workDiv);
+  // Iterate through each job in obj, represented by var n
+  for (var n=0; n < obj.jobs.length; n++){
 
-  // Prepend work name div to new div just added
-  var workNameDiv = "<div class='work-name'>" + mWorkName + "</div>";
-  projectsSection.children().last().prepend(workNameDiv);
+    // Create div for this job and append to workSection
+    var jobDiv = "<div class='job'></div>";
+    workSection.append(jobDiv);
 
-  // Append project description div as child to the work-name class div
-  var workDescDiv = "<div class='work-desc'>" + mWorkDescription + "</div>";
-  workSection.children().last().children().first().append(workDescDiv);
+    // Parse the job title
+    var jobTitle = obj.jobs[n].title;
+    // Create new div for job title as child of jobDiv with jobTitle inside
+    var jobTitleDiv = "<div class='job-title'>" + jobTitle + "</div>";
+    workSection.children().last().append(jobTitleDiv);
 
-  // Append all items related to work with a for loop into a newly created <ul>
-  var workItemsUl = "<ul class='work-items'></ul>";
-  workSection.children().last().children().first().append(workItemsUl);
-  var workUl = workSection.children().last().children().first().find("ul");
-  for (var i=0; i < mWorkItems.length; i++) {
-    // Obtain i'th item and append it to newly added ul
-    var listItemToAppend = "<li>" + mWorkItems[i] + "</li>";
-    workUl.append(listItemToAppend);
+    // Parse the job logo
+    //var jobLogoUrl = "'" + obj.jobs[n].logoUrl + "'";
+    // Create img element with logo url inside
+    //var jobLogoImg = "<img src= " + jobLogoUrl + ">";
+    // Add the img element as child of jobDiv
+    //workSection.children().last().append(jobLogoImg);
+
+    // Parse the company name
+    var jobName = obj.jobs[n].name;
+    // Create new div for company/job name as child of jobDiv with companyName inside
+    var jobNameDiv = "<div class='job-name'>" + jobName + "</div>";
+    workSection.children().last().append(jobNameDiv);
+
+    // Parse the start date and end date and concatenate a string
+    var jobStart = obj.jobs[n].startDate;
+    var jobEnd = obj.jobs[n].endDate;
+    // Create new div for job dates as child of jobDiv with concatenated string inside
+    var jobDatesDiv = "<div class='job-dates'>" + jobStart + " - " + jobEnd + "</div>";
+    workSection.children().last().append(jobDatesDiv);
+
+    // Create a <ul> for the job duties & append it to jobDiv
+    var jobDutiesUl = "<ul class='job-items'></ul>";
+    workSection.children().last().append(jobDutiesUl);
+
+    // Gain reference to the UL in order to append items to it
+    var workUl = workSection.children().last().find("ul");
+    // Loop through items in duties and append as list items
+    for (var m = 0; m < obj.jobs[n].duties.length; m++){
+      workUl.append('<li>' + obj.jobs[n].duties[m] + '</li>');
+    }
   }
 
 }
+// Add the parsed JSON to the DOM with the function addJSONToWork
+addJSONToWork(workSectionJSON);
