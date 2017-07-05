@@ -50,7 +50,7 @@ var project2Items = [
   "Mitigated potential latency issues with responsive images and responsible compression techniques",
   "Prioritized simple design layouts and best practices"];
   var project2Url = "https://github.com/fischk5/living-forward";
-addToEndOfProjectSection(project2Name,null,project2Desc,project2Items);
+//addToEndOfProjectSection(project2Name,null,project2Desc,project2Items);
 
 // Elements for Open Source Contributions project
 var project3Name = "Open Source Contributions (2017)";
@@ -60,7 +60,7 @@ var project3Items = [
   "Smelled bad and designed a solution to not smell so bad",
   "Knocked myself out on the kitchen counter but I got back up again"];
 var project3Url = "https://github.com/fischk5/living-forward";
-addToEndOfProjectSection(project3Name,null,project3Desc,project3Items);
+//addToEndOfProjectSection(project3Name,null,project3Desc,project3Items);
 
 // Elements for Pointless project
 var project4Name = "Pointless (2016)";
@@ -153,3 +153,75 @@ function addJSONToWork(workJSON) {
 }
 // Add the parsed JSON to the DOM with the function addJSONToWork
 addJSONToWork(workSectionJSON);
+
+/*
+EDUCATION
+  Education was populated by parsing a JSON object and appending the information
+  to the DOM with a parsing function
+*/
+
+// Create a JSON object for the education information
+var educationSectionJSON = '{'
++ '"schools" : ['
++ '{'
++ '"name" : "Minnesota State University, Mankato", '
++ '"graduationDate" : "May, 2013", '
++ '"location" : "Mankato, Minnesota", '
++ '"accomplishments" : ["Bachelor of Science in Civil Engineering with a Minor in Mathematics", "Cum Laude", "Led a team of my peers as project manager of the senior capstone project."] '
++ '}, '
++ '{'
++ '"name" : "Kennedy High School", '
++ '"graduationDate" : "June, 2009", '
++ '"location" : "Bloomington, Minnesota", '
++ '"accomplishments" : ["Top 10%"] '
++ '} ] }';
+
+// Obtaining the section with the id resume-work
+var educationSection = $('#resume-education');
+
+// Function receives a JSON object, parses information, and adds to DOM
+function addJSONToEducation(educationJSON) {
+
+  // Parse the JSON object to variable obj
+  var obj = JSON.parse(educationJSON);
+
+  // Iterate through each job in obj, represented by var n
+  for (var n=0; n < obj.schools.length; n++){
+
+    // Create div for this job and append to educationSection
+    var educationDiv = "<div class='education'></div>";
+    educationSection.append(educationDiv);
+
+    // Parse the school name
+    var schoolName = obj.schools[n].name;
+    // Create new div for school name as child of educationDiv with schoolName inside
+    var schoolNameDiv = "<div class='school-name'>" + schoolName + "</div>";
+    educationSection.children().last().append(schoolNameDiv);
+
+    // Parse the school location
+    var schoolLocation = obj.schools[n].location;
+    // Create new div for school location as child of educationDiv with schoolLocation inside
+    var schoolLocationDiv = "<div class='school-location'>" + schoolLocation + "</div>";
+    educationSection.children().last().append(schoolLocationDiv);
+
+    // Parse the graduation date
+    var schoolGraduationDate = obj.schools[n].graduationDate;
+    // Create new div for graduation date as child of educationDiv with schoolGraduationDate inside
+    var schoolGraduationDiv = "<div class='school-graduation'>" + schoolGraduationDate + "</div>";
+    educationSection.children().last().append(schoolGraduationDiv);
+
+    // Create a <ul> for the job duties & append it to jobDiv
+    var schoolAccomplishmentsUl = "<ul class='school-items'></ul>";
+    educationSection.children().last().append(schoolAccomplishmentsUl);
+
+    // Gain reference to the UL in order to append items to it
+    var schoolUl = educationSection.children().last().find("ul");
+    // Loop through items in duties and append as list items
+    for (var m = 0; m < obj.schools[n].accomplishments.length; m++){
+      schoolUl.append('<li>' + obj.schools[n].accomplishments[m] + '</li>');
+    }
+  }
+}
+
+// Add the parsed JSON to the DOM with the function addJSONToEducation
+addJSONToEducation(educationSectionJSON);

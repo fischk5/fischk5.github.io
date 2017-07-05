@@ -60,13 +60,13 @@ li {
   text-align: center;
 }
 
-.project, .job {
+.project, .job, .education {
   margin-top: 24px;
   margin-bottom: 40px;
   font-weight: normal;
 }
 
-.project-name, .job-title {
+.project-name, .job-title, .school-name {
   text-align: left;
   font-size: 24px;
   margin-bottom: 12px;
@@ -82,21 +82,21 @@ li {
   margin-bottom: 12px;
 }
 
-.job-name, .job-dates {
+.job-name, .job-dates, .school-location, .school-graduation {
   font-weight: normal;
   color: #adfff1;
   text-align: left;
   font-size: 18px;
 }
 
-.project-items, .job-items {
+.project-items, .job-items, .school-items {
   font-weight: normal;
   text-align: left;
   font-size: 18px;
   color: #f1f2eb;
 }
 
-.job-items {
+.job-items, .school-items {
   margin-top: 12px;
 }
 
@@ -133,11 +133,11 @@ li {
     font-size: 18px;
   }
 
-  .project, .job {
+  .project, .job, .education {
     margin-bottom: 40px;
   }
 
-  .project-name, .job-title {
+  .project-name, .job-title, .school-name {
     font-weight: normal;
     text-align: center;
     font-size: 24px;
@@ -148,11 +148,11 @@ li {
     font-size: 18px;
   }
 
-  .job-name, .job-dates {
+  .job-name, .job-dates, .school-location, .school-graduation  {
     text-align: center;
   }
 
-  .project-items, .job-items {
+  .project-items, .job-items, .school-item {
     font-weight: normal;
     text-align: left;
     font-size: 18px;
@@ -181,11 +181,13 @@ li {
   #resume-skillz {
     order: 4;
     width: 100%;
+    text-align: center;
   }
 
   #resume-contact {
     order: 5;
     width: 100%;
+    text-align: center;
   }
 
 }
