@@ -78,6 +78,8 @@ WORK
 */
 
 // Create a JSON object for the work information
+// I could have made this an external file but chose
+// to keep it here for transparency and simplicity
 var workSectionJSON = '{'
 + '"jobs" : ['
 + '{'
@@ -225,3 +227,37 @@ function addJSONToEducation(educationJSON) {
 
 // Add the parsed JSON to the DOM with the function addJSONToEducation
 addJSONToEducation(educationSectionJSON);
+
+/* SKILLS */
+
+// Array to hold the skill descriptions
+var allTheSkills = [];
+
+// Pushing the skill descriptoins to the skill array
+allTheSkills.push('HTML, CSS, JavaScript and Java');
+allTheSkills.push('Leadership');
+allTheSkills.push('Time Management');
+allTheSkills.push('Lifelong Learning');
+
+// Obtaining the section with the id resume-skillz
+const skillsSection = $('#resume-skillz');
+
+function addSkills(skills) {
+
+  // initialize the string which will contain the <ul> to be appended to the
+  // skills section
+  let skillsUl = '<ul class="skill-items">';
+
+  // Loop through array and add information to the unordered list string
+  for(let i=0; i < skills.length; i++){
+    skillsUl += '<li>' + skills[i] + '</li>';
+  }
+
+  // Add closing tag to ul
+  skillsUl += '</ul>';
+
+  // Append allTheSkills to the skillsSection
+  skillsSection.children().append(skillsUl);
+}
+
+addSkills(allTheSkills);

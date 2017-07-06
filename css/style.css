@@ -89,14 +89,21 @@ li {
   font-size: 18px;
 }
 
-.project-items, .job-items, .school-items {
+.project-items,
+.job-items,
+.school-items,
+.skill-items,
+.reference-items {
   font-weight: normal;
   text-align: left;
   font-size: 18px;
   color: #f1f2eb;
 }
 
-.job-items, .school-items {
+.job-items,
+.school-items,
+.skill-items,
+.reference-items {
   margin-top: 12px;
 }
 
@@ -148,11 +155,18 @@ li {
     font-size: 18px;
   }
 
-  .job-name, .job-dates, .school-location, .school-graduation  {
+  .job-name,
+  .job-dates,
+  .school-location,
+  .school-graduation  {
     text-align: center;
   }
 
-  .project-items, .job-items, .school-item {
+  .project-items,
+  .job-items,
+  .school-item,
+  .skill-items,
+  .reference-items {
     font-weight: normal;
     text-align: left;
     font-size: 18px;
