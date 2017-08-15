@@ -37,7 +37,12 @@ appModule.factory('dataFactory', function () {
   };
 
   // Web page navigation section titles
-  const sectionTitles = ["Front-End Web Developer", "Civil Engineer", "Angler"]
+  const sectionTitles = ["Front-End Web Developer", "Civil Engineer", "Angler"];
+
+  // Return the sectionTitles array
+  dataFactory.getSectionTitles = function() {
+    return sectionTitles;
+  }
 
   // The section object, which contains the information for each section
   // and is read by the Angular framework
@@ -118,6 +123,9 @@ appModule.controller('MainController', ['$scope', 'dataFactory',
 
     // Assign section data to global scope (array of objects where each object is a section)
     $scope.sectionData = dataFactory.getSectionData();
+
+    // Section titles used for navigation
+    $scope.sectionTitles = dataFactory.getSectionTitles();
 
   }
 ]);

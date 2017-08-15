@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-ng-app="application">
+<html ng-app="application">
 <head>
   <meta charset="utf-8">
   <meta name="description" content="Summary of Kevin Fischer">
@@ -9,8 +9,37 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body data-ng-controller="MainController">
+<body ng-controller="MainController">
 
+  <header>
+    <!-- Name and subtitles -->
+    <h1>{{name}}</h1>
+    <h4>
+      <ul>
+        <li ng-repeat="title in sectionTitles">{{title}}</li>
+      </ul>
+    </h4>
+
+  </header>
+
+  <section ng-repeat="section in sectionData">
+    <h2>{{section.sectionTitle}}</h2>
+    <p ng-repeat="paragraph in section.sectionParagraphs">{{paragraph}}</p>
+    <!-- If sectionList exists this html will trigger -->
+    <p>{{section.sectionList.listTitle}}</p>
+    <!-- If listAdvanced exists this html will trigger -->
+    <ul>
+      <li ng-repeat="item in section.sectionList.listAdvanced"><span><a ng-href="{{item.itemSource}}">{{item.itemName}}</a> - {{item.itemDescription}}</span></li>
+    </ul>
+    <!-- If listSimple exists this html will trigger -->
+    <ul>
+      <li ng-repeat="item in section.sectionList.listSimple">{{item}}</li>
+    </ul>
+
+  </section>
+
+  <footer>
+  </footer>
 
   <!-- Load jquery v3.2.1 -->
   <script src="js/jquery-3.2.1.js"></script>
