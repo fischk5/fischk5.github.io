@@ -1,0 +1,110 @@
+:root {
+  --text-color: #191919;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  background-color: #191919;
+  max-width: 100%;
+}
+
+body {
+  max-width: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+/* ----------------
+  Style Resets
+  ----------------*/
+h1,
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul {
+  padding-left: 0;
+}
+/* ----------------
+  Utility Classes
+  ----------------*/
+.text-center {
+  /* Centers text in an element */
+  text-align: center  !important;
+}
+
+/* remove bullets and space items even horizontally*/
+.flex-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.italics {
+  font-style: italic;
+}
+
+.flex-even-space {
+  flex: 1;
+}
+
+.list-bulletless {
+  list-style: none;
+  text-align: center;
+}
+
+/* ----------------
+  Major Styles
+  ----------------*/
+h2 {
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 1px;
+  width: 80%;
+  /* backdrop design */
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  background: rgba(68,68,68,.8);
+  border-radius: 5px;
+  color: white;
+  border-width: 1px;
+}
+
+h4 {
+  font-size: 12px;
+}
+
+p {
+  line-height: 1.4;
+  font-size: 16px;
+  color: var(--text-color);
+  text-align: justify;
+}
+
+li {
+  padding: 10px 0;
+  color: var(--text-color);
+}
+
+/* ----------------
+  Selector Styles
+  ----------------*/
+
+.hr-underline {
+  width: 30%;
+  min-width: 200px;
+  border-color: rgba(68,68,68,.4);
+}

@@ -81,7 +81,7 @@ appModule.factory('dataFactory', function () {
     {
       "sectionTitle" : sectionTitles[1],
       "sectionParagraphs" : [
-        "I started a career as a civil engineeer after graduating from Minnesota State University, Mankato.  I specialized in water resources, designing drainage systems for municipal clients as a consultant.",
+        "I started a career as a civil engineer after graduating from Minnesota State University, Mankato.  I specialized in water resources, designing drainage systems for municipal clients as a consultant.",
         "Although I changed careers, my experience gave me the ability to think critically towards a pragmatic solution, work towards a clients goals on a team with various specialties, and communicate effectively to shape responsibilities and focus on the project scope.",
         "I left civil engineering to pursue my passion of web development full time."]
     },

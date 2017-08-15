@@ -11,12 +11,12 @@
 
 <body ng-controller="MainController">
 
-  <header>
+  <header class="text-center">
     <!-- Name and subtitles -->
     <h1>{{name}}</h1>
     <h4>
-      <ul>
-        <li ng-repeat="title in sectionTitles">{{title}}</li>
+      <ul class="flex-list">
+        <li ng-repeat="title in sectionTitles" class="flex-even-space">{{title}}</li>
       </ul>
     </h4>
 
@@ -24,23 +24,24 @@
 
   <section ng-repeat="section in sectionData">
     <h2>{{section.sectionTitle}}</h2>
+    <hr class="hr-underline">
     <p ng-repeat="paragraph in section.sectionParagraphs">{{paragraph}}</p>
     <!-- If sectionList exists this html will trigger -->
     <p>{{section.sectionList.listTitle}}</p>
     <!-- If listAdvanced exists this html will trigger -->
     <ul>
-      <li ng-repeat="item in section.sectionList.listAdvanced"><span><a ng-href="{{item.itemSource}}">{{item.itemName}}</a> - {{item.itemDescription}}</span></li>
+      <li ng-repeat="item in section.sectionList.listAdvanced" class="list-bulletless"><div><a ng-href="{{item.itemSource}}">{{item.itemName}}</a></div><div>{{item.itemDescription}}</div></li>
     </ul>
     <!-- If listSimple exists this html will trigger -->
-    <ul>
-      <li ng-repeat="item in section.sectionList.listSimple">{{item}}</li>
+    <ul class="list-bulletless">
+      <li ng-repeat="item in section.sectionList.listSimple" class="italics">{{item}}</li>
     </ul>
-
+    <hr>
   </section>
 
   <footer>
-    <h4>Work with me?</h4>
-    <ul>
+    <h4 class="text-center">Work with me?</h4>
+    <ul class="flex-list">
       <li ng-repeat="item in footerData"><a ng-href="{{item.source}}" target="{{item.target}}">{{item.description}}</a></li>
     </ul>
   </footer>
