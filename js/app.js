@@ -94,8 +94,9 @@ appModule.factory('dataFactory', function () {
       "sectionList" : {
         "listTitle" : "There are many lessons, both real and facetious that I've learned fishing in the great midwest.",
         "listSimple" : [
+          "The 'right' way to do things is a good start, but each situation presents different challenges that require learning and adapting.",
+          "Growth comes through experimentation, correcting mistakes, and learning from those who have gone before you.",
           "The fishing is always good, even if the catching isn't.",
-          "If people concentrated on the really important things in life, there'd be a shortage of fishing poles. (Doug Larson)",
           "There's a fine line between fishing and just standing on the shore like an idiot. (Steven Wright)",
           "Give a man a fish and he will eat for a day.  Teach him how to fish and he will sit in a boat and drink beer all day."
         ]
@@ -103,9 +104,34 @@ appModule.factory('dataFactory', function () {
     }
   ];
 
+  // Provide the section data to the controller
   dataFactory.getSectionData = function() {
     return sections;
   }
+
+  // Footer information
+  const footerData = [
+    {
+      "description" : "Email",
+      "source" : "mailto:fischk5@hotmail.com"
+    },
+    {
+      "description" : "GitHub",
+      "source" : "https://github.com/fischk5"
+    },
+    {
+      "description" : "Resume",
+      "source" : "./download/kevin-fischer-resume.pdf",
+      "target" : "_blank"
+    }
+  ];
+
+  // Return the footerData to the global scope
+  dataFactory.getFooterData = function() {
+    return footerData;
+  }
+
+
 
 
   return dataFactory;
@@ -126,6 +152,9 @@ appModule.controller('MainController', ['$scope', 'dataFactory',
 
     // Section titles used for navigation
     $scope.sectionTitles = dataFactory.getSectionTitles();
+
+    // Footer information for contact
+    $scope.footerData = dataFactory.getFooterData();
 
   }
 ]);

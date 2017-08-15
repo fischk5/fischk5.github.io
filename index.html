@@ -39,6 +39,10 @@
   </section>
 
   <footer>
+    <h4>Work with me?</h4>
+    <ul>
+      <li ng-repeat="item in footerData"><a ng-href="{{item.source}}" target="{{item.target}}">{{item.description}}</a></li>
+    </ul>
   </footer>
 
   <!-- Load jquery v3.2.1 -->
