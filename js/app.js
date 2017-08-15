@@ -113,5 +113,11 @@ appModule.factory('dataFactory', function () {
 appModule.controller('MainController', ['$scope', 'dataFactory',
   function($scope, dataFactory) {
 
+    // Assign name to global scope
+    $scope.name = dataFactory.getName();
+
+    // Assign section data to global scope (array of objects where each object is a section)
+    $scope.sectionData = dataFactory.getSectionData();
+
   }
 ]);
