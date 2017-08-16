@@ -73,7 +73,7 @@ header {
   width: 100%;
   background-color: var(--text-color);
   padding-top: 15px;
-  height: 80px;
+  height: 90px;
 }
 
 header,
@@ -81,10 +81,14 @@ header h4 ul li {
   color: white;
 }
 
+h1 {
+  letter-spacing: 3px;
+}
+
 h2 {
   text-align: center;
   font-size: 18px;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   width: 80%;
   /* backdrop design */
   padding: 10px;
@@ -97,6 +101,7 @@ h2 {
 }
 
 h4 {
+  letter-spacing: 1px;
   font-size: 12px;
   margin-top: 0px;
   margin-bottom: 0px;
@@ -134,7 +139,7 @@ img {
   ----------------*/
 
 .section-wrapper {
-  margin-top: 95px;
+  margin-top: 105px;
   max-width: 100%;
   padding-top: 10px;
   padding-left: 20px;
@@ -163,6 +168,7 @@ footer {
 }
 
 footer h5 {
+  letter-spacing: 1px;
   text-decoration: underline;
   color: white;
   font-size: 10px;

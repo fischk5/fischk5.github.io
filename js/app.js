@@ -48,7 +48,7 @@ appModule.factory('dataFactory', function () {
   // and is read by the Angular framework
   const sections = [
     {
-    "sectionTitle" : "Hi, I'm Kevin",
+    "sectionTitle" : "Hi, I'm Kevin!",
     "imageSmall" : "./images/intro_sm.png",
     "imageMedium" : "./images/intro_md.png",
     "imageLarge" : "./images/intro_lrg.png",
@@ -69,17 +69,17 @@ appModule.factory('dataFactory', function () {
           {
             "itemName" : "Make Your Day",
             "itemSource" : "https://github.com/fischk5/make-your-day",
-            "itemDescription" : "I built a website for a business startup in Bloomington, Minnesota using Angular, Bootstrap, jQuery, and Git."
+            "itemDescription" : "I built a website for a business startup in Bloomington, Minnesota, operating as web developer and designer to achieve the client's goals."
           },
           {
-            "itemName" : "Restaurant Website Overhaul",
+            "itemName" : "Houlihans Website Overhaul",
             "itemSource" : "https://github.com/fischk5/houlihans-redesign",
-            "itemDescription" : "Improving the speed and efficiency of a popular restaurant's web presence."
+            "itemDescription" : "The existing Houlihans website is slow, busy, and slightly confusing.  I recreated the site as a single page application, prioritizing speed, clarity, and user experience."
           },
           {
             "itemName" : "Living Word",
             "itemSource" : "https://github.com/fischk5/living-word",
-            "itemDescription" : "Bible verse fetching application made with NET Bible API and Angular"
+            "itemDescription" : "A web application for fetching bible verses for display.  Calls the NET Bible API asynchronously and is built with Angular for zippy UI changes."
           }
         ]
       }
@@ -101,15 +101,13 @@ appModule.factory('dataFactory', function () {
       "imageLarge" : "./images/fish_lrg.png",
       "sectionParagraphs" : [
         "My favorite outdoor activity involves tricking creatures into letting me put sharp metal through their face.  I love fishing because it's a relaxing challenge that I can approach with any level of seriousness I want.",
-        "You can find me fishing for bass (my favorite), northern pike, and bluegill anywhere I go.  Whether it's trudging through thick shoreline, sitting on a pier, or leaning off a boat, I'll fish anywhere I can in many different conditions."
+        "You can find me fishing for bass (my favorite), northern pike, and bluegill anywhere I go.  Whether it's trudging through thick shoreline, sitting on a pier, or leaning off a boat, I'll fish anywhere."
       ],
       "sectionList" : {
         "listTitle" : "There are many lessons, both real and facetious that I've learned fishing in the great midwest.",
         "listSimple" : [
-          "The 'right' way to do things is a good start, but each situation presents different challenges that require learning and adapting.",
           "Growth comes through experimentation, correcting mistakes, and learning from those who have gone before you.",
-          "The fishing is always good, even if the catching isn't.",
-          "Give a man a fish and he will eat for a day.  Teach him how to fish and he will sit in a boat and drink beer all day."
+          "The fishing is always good, even if the catching isn't."
         ]
       }
     }
