@@ -99,6 +99,13 @@ li {
   color: var(--text-color);
 }
 
+picture,
+img {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* ----------------
   Selector Styles
   ----------------*/

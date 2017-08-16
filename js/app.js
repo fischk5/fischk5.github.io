@@ -49,10 +49,16 @@ appModule.factory('dataFactory', function () {
   const sections = [
     {
     "sectionTitle" : "Hi, I'm Kevin",
+    "imageSmall" : "./images/intro_sm.png",
+    "imageMedium" : "./images/intro_md.png",
+    "imageLarge" : "./images/intro_lrg.png",
     "sectionParagraphs" : ["I'm a young front-end web developer, former civil engineer, and novice angler.  I'm the product of a curious mind intent on finding practical solutions to hard problems."]
     },
     {
       "sectionTitle" : sectionTitles[0],
+      "imageSmall" : "./images/front_sm.png",
+      "imageMedium" : "./images/front_md.png",
+      "imageLarge" : "./images/front_lrg.png",
       "sectionParagraphs" : [
         "I build websites for people, doing my best to deliver a practical, purposeful, and pleasing user experience.",
         "My career goal is continuous learning through interesting work, so that I can contribute to, grow in, and lead others in the industry.",
@@ -80,6 +86,9 @@ appModule.factory('dataFactory', function () {
     },
     {
       "sectionTitle" : sectionTitles[1],
+      "imageSmall" : "./images/civil_sm.png",
+      "imageMedium" : "./images/civil_md.png",
+      "imageLarge" : "./images/civil_lrg.png",
       "sectionParagraphs" : [
         "I started a career as a civil engineer after graduating from Minnesota State University, Mankato.  I specialized in water resources, designing drainage systems for municipal clients as a consultant.",
         "Although I changed careers, my experience gave me the ability to think critically towards a pragmatic solution, work towards a clients goals on a team with various specialties, and communicate effectively to shape responsibilities and focus on the project scope.",
@@ -87,6 +96,9 @@ appModule.factory('dataFactory', function () {
     },
     {
       "sectionTitle" : sectionTitles[2],
+      "imageSmall" : "./images/fish_sm.png",
+      "imageMedium" : "./images/fish_md.png",
+      "imageLarge" : "./images/fish_lrg.png",
       "sectionParagraphs" : [
         "My favorite outdoor activity involves tricking creatures into letting me put sharp metal through their face.  I love fishing because it's a relaxing challenge that I can approach with any level of seriousness I want.",
         "You can find me fishing for bass (my favorite), northern pike, and bluegill anywhere I go.  Whether it's trudging through thick shoreline, sitting on a pier, or leaning off a boat, I'll fish anywhere I can in many different conditions."

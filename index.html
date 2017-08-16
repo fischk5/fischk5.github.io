@@ -25,6 +25,12 @@
   <section ng-repeat="section in sectionData">
     <h2>{{section.sectionTitle}}</h2>
     <hr class="hr-underline">
+    <picture>
+      <source media="(min-width: 800px)" srcset="{{section.imageLarge}}">
+      <source media="(min-width: 300px)" srcset="{{section.imageMedium}}">
+      <source media="(min-width: 200px)" srcset="{{section.imageSmall}}">
+      <img src="{{section.imageLarge}}">
+    </picture>
     <p ng-repeat="paragraph in section.sectionParagraphs">{{paragraph}}</p>
     <!-- If sectionList exists this html will trigger -->
     <p>{{section.sectionList.listTitle}}</p>
