@@ -109,7 +109,6 @@ appModule.factory('dataFactory', function () {
           "The 'right' way to do things is a good start, but each situation presents different challenges that require learning and adapting.",
           "Growth comes through experimentation, correcting mistakes, and learning from those who have gone before you.",
           "The fishing is always good, even if the catching isn't.",
-          "There's a fine line between fishing and just standing on the shore like an idiot. (Steven Wright)",
           "Give a man a fish and he will eat for a day.  Teach him how to fish and he will sit in a boat and drink beer all day."
         ]
       }
