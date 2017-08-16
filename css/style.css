@@ -15,9 +15,6 @@ body {
   margin-bottom: 0;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 20px;
   background-color: white;
   box-sizing: border-box;
 }
@@ -68,6 +65,16 @@ ul {
 /* ----------------
   Major Styles
   ----------------*/
+header {
+  background-color: var(--text-color);
+  padding-top: 15px;
+}
+
+header,
+header h4 ul li {
+  color: white;
+}
+
 h2 {
   text-align: center;
   font-size: 18px;
@@ -85,13 +92,15 @@ h2 {
 
 h4 {
   font-size: 12px;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 p {
   line-height: 1.6;
   font-size: 16px;
   color: var(--text-color);
-  text-align: justify;
+  text-align: center;
 }
 
 li {
@@ -99,16 +108,30 @@ li {
   color: var(--text-color);
 }
 
+
+
 picture,
 img {
-  width: 100%;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
+  max-height: 200px;
+  background-size: cover;
 }
 
 /* ----------------
   Selector Styles
   ----------------*/
+
+.section-wrapper {
+  max-width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
 
 .hr-underline {
   width: 30%;
@@ -116,6 +139,30 @@ img {
   border-color: rgba(68,68,68,.4);
 }
 
+.list-bulletless a {
+  color: #ec4431;
+}
+
+footer {
+  padding-top: 15px;
+  background-color: var(--text-color);
+}
+
+footer h5 {
+  text-decoration: underline;
+  color: white;
+  font-size: 10px;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
 footer ul li {
-  font-size: 12px;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+footer ul li a {
+  color: #ec4431;
+  text-decoration: none;
 }
