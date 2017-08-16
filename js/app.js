@@ -69,7 +69,7 @@ appModule.factory('dataFactory', function () {
           {
             "itemName" : "Make Your Day",
             "itemSource" : "https://github.com/fischk5/make-your-day",
-            "itemDescription" : "Web application for business startup out of Bloomington, Minnesota"
+            "itemDescription" : "I built a website for a business startup in Bloomington, Minnesota using Angular, Bootstrap, jQuery, and Git."
           },
           {
             "itemName" : "Restaurant Website Overhaul",
