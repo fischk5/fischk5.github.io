@@ -147,8 +147,14 @@ img {
   border-color: rgba(68,68,68,.4);
 }
 
+.github-link {
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+
 .list-bulletless a {
   color: #ec4431;
+  font-size: 14px;
 }
 
 footer {
@@ -187,6 +193,10 @@ footer ul li a {
     line-height: 1.5;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .list-bulletless a {
+    font-size: 16px;
   }
 
   .section-wrapper {
